@@ -36,6 +36,9 @@ namespace Symon
                 case "E:":
                     diskName = "ad2";
                     break;
+                case "F:":
+                    diskName = "ad3";
+                    break;
             }
 
             this.MT_IO = (byte)MT_Values.MT_IO_VAL;

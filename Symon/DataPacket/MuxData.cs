@@ -6,13 +6,13 @@ namespace Symon
     struct MuxData
     {
         public MuxHeader header;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 512)]
         public byte[] data;
 
         public MuxData(bool notDefault)
         {
             header = new MuxHeader();
-            data = new byte[256];
+            data = new byte[512];
         }
     }
 
