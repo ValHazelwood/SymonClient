@@ -20,6 +20,7 @@ CONFIGURATION
 
 EXAMPLE
 
+...
 <userSettings>
     <RemoteHost host="192.168.0.1" port="2100" />
     <Counters>
@@ -31,6 +32,8 @@ EXAMPLE
       <add key="if(1)" value="Symon.IFInfo"/>
     </Counters>
   </userSettings>
+...
+
 	
 cpu			Processor(_Total) counter.	
 
@@ -42,9 +45,12 @@ if(<iface index>)	Network Interface counter (for server-side config (symux): 0 -
 
 BUILD
 
+cd <symon_source_dir>
+
 %SystemRoot%\Microsoft.NET\Framework\v3.5\MSBuild.exe Symon.csproj /t:Rebuild /p:Configuration=Release /p:Platform=anycpu
 
 INSTALL
 
-symon.exe /i
+Copy symon.exe and symon.exe.config to your work directory, edit symon.exe.config and run command "symon.exe /i"
+Symon client will start as windows service.
 
